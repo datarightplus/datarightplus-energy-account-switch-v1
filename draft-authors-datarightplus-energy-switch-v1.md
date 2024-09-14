@@ -77,8 +77,8 @@ In addition to the provisions outlined in [@!DATARIGHTPLUS-INFOSEC-BASELINE] the
 
 The request object submitted to the authorisation server:
 
-1. **SHALL** require a string parameter `urn:dio:action_id` referencing a valid _Action Identifier_;
-2. **SHALL** reject requests containing a `urn:dio:action_id` parameter that is unknown, expired or not associated with the requesting Initiator;
+1. **SHALL** require a string parameter `urn:dio:action_id`, located within the ID Token claims, referencing a valid _Action Identifier_ previously submitted to the `initiateEnergySwitch` endpoint and;
+2. **SHALL** be rejected if it contains a `urn:dio:action_id` parameter that is unknown, expired or not associated with the requesting Initiator;
 
 #### Example
 
