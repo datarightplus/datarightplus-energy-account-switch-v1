@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-11-03T00:11:32.887644+00:00",
+  "timestamp": "2024-11-05T00:10:28.166914+00:00",
   "repo": "datarightplus/datarightplus-energy-account-switch-v1",
   "labels": [
     {
@@ -49,6 +49,23 @@
       "color": "ffffff"
     }
   ],
-  "issues": [],
+  "issues": [
+    {
+      "number": 1,
+      "id": "I_kwDOMxhpcM6c3HxV",
+      "title": "Split Get Energy Switch Status endpoint / Add a Get Energy Switch Agreement endpoint?",
+      "url": "https://github.com/datarightplus/datarightplus-energy-account-switch-v1/issues/1",
+      "state": "OPEN",
+      "author": "wcai-biza",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Currently, Get Energy Switch Status does not tell ADR how the account switch is going after authorize code is claimed. We need another endpoint that ADR can poll to know if the account switching completes successfully or fails.",
+      "createdAt": "2024-11-04T02:44:28Z",
+      "updatedAt": "2024-11-04T02:44:28Z",
+      "closedAt": null,
+      "comments": []
+    }
+  ],
   "pulls": []
 }
