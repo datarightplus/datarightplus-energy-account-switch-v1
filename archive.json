@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-11-05T00:10:28.166914+00:00",
+  "timestamp": "2024-11-07T00:10:25.955912+00:00",
   "repo": "datarightplus/datarightplus-energy-account-switch-v1",
   "labels": [
     {
@@ -63,6 +63,22 @@
       "body": "Currently, Get Energy Switch Status does not tell ADR how the account switch is going after authorize code is claimed. We need another endpoint that ADR can poll to know if the account switching completes successfully or fails.",
       "createdAt": "2024-11-04T02:44:28Z",
       "updatedAt": "2024-11-04T02:44:28Z",
+      "closedAt": null,
+      "comments": []
+    },
+    {
+      "number": 2,
+      "id": "I_kwDOMxhpcM6dKLB0",
+      "title": "urn:dio:action_id claim in the non-normative example of a decoded request object should be a JSON object",
+      "url": "https://github.com/datarightplus/datarightplus-energy-account-switch-v1/issues/2",
+      "state": "OPEN",
+      "author": "wcai-biza",
+      "authorAssociation": "NONE",
+      "assignees": [],
+      "labels": [],
+      "body": "Currently, the non-normative example of a decoded request object in the spec has a string type `urn:dio:action_id` claim in `id_token` section:\r\n```\r\n{\r\n  ...\r\n  \"claims\": {\r\n    \"id_token\": {\r\n      \"urn:dio:action_id\": \"496a3ba7-04b4-4362-b775-9e0433e48eea\",\r\n      \"acr\": {\r\n        \"essential\": true,\r\n        \"values\": [\"urn:cds.au:cdr:3\"]\r\n      }\r\n    },\r\n    ...\r\n  },\r\n  ...\r\n}\r\n```\r\n\r\nHowever, according to https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests, `id_token` members must be either `null` or a JSON object.\r\n",
+      "createdAt": "2024-11-05T23:14:48Z",
+      "updatedAt": "2024-11-05T23:14:48Z",
       "closedAt": null,
       "comments": []
     }
