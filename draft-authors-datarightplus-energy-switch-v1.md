@@ -72,15 +72,10 @@ In addition to the provisions outlined in [@!DATARIGHTPLUS-INFOSEC-BASELINE] the
 
 1. **SHALL** support the `dio:action` authorisation scope;
 2. **SHALL** include the `dio:action` authorisation scope within Dynamic Client Registration responses;
+3. **SHALL** support request objects containing an essential ID Token claim named `urn:dio:action_id` referencing a valid _Action Identifier_;
+2. **SHALL** reject request objects containing a `urn:dio:action_id` claim that is unknown, expired or not associated with the requesting Initiator;
 
-### Request Object
-
-The request object submitted to the authorisation server:
-
-1. **SHALL** require a string parameter `urn:dio:action_id`, located within the ID Token claims, referencing a valid _Action Identifier_ previously submitted to the `initiateEnergySwitch` endpoint and;
-2. **SHALL** be rejected if it contains a `urn:dio:action_id` parameter that is unknown, expired or not associated with the requesting Initiator;
-
-#### Example
+### Example
 
 The following is a non-normative example of a decoded request object requesting authorisation for a previously lodged `actionId`
 
@@ -97,7 +92,10 @@ The following is a non-normative example of a decoded request object requesting 
   "scope": "openid",
   "claims": {
     "id_token": {
-       "urn:dio:action_id": "496a3ba7-04b4-4362-b775-9e0433e48eea",
+      "urn:dio:action_id": {
+        "essential": true,
+        "values": ["496a3ba7-04b4-4362-b775-9e0433e48eea"]
+      },
       "acr": {
         "essential": true,
         "values": ["urn:cds.au:cdr:3"]
