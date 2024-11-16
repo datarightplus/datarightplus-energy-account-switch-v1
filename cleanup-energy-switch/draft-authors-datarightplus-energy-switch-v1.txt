@@ -3,9 +3,9 @@
 
 
 datarightplus                                                     S. Low
-Internet-Draft                                                   Biza.io
-Intended status: Experimental                           16 November 2024
-Expires: 20 May 2025
+Internet-Draft                                                    W. Cai
+Intended status: Experimental                                    Biza.io
+Expires: 20 May 2025                                    16 November 2024
 
 
                   DataRight+: Energy Account Switch V1
@@ -75,7 +75,7 @@ Table of Contents
    6.  Implementation Considerations
    7.  Security Considerations
    8.  Normative References
-   Author's Address
+   Authors' Addresses
 
 1.  Scope
 
@@ -275,8 +275,13 @@ Table of Contents
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/info/rfc2119>.
 
-Author's Address
+Authors' Addresses
 
    Stuart Low
    Biza.io
    Email: stuart@biza.io
+
+
+   Wei Cai
+   Biza.io
+   Email: wcai@biza.io
