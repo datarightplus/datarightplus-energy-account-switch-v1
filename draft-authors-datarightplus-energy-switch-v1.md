@@ -17,8 +17,8 @@ initials="S."
 surname="Low"
 fullname="Stuart Low"
 organization="Biza.io"
-[author.address]
-email = "stuart@biza.io"
+    [author.address]
+    email = "stuart@biza.io"
 
 [[author]]
 initials="W."
