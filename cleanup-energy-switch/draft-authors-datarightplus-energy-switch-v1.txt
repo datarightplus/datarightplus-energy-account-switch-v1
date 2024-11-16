@@ -4,8 +4,8 @@
 
 datarightplus                                                     S. Low
 Internet-Draft                                                   Biza.io
-Intended status: Experimental                           10 November 2024
-Expires: 14 May 2025
+Intended status: Experimental                           16 November 2024
+Expires: 20 May 2025
 
 
                   DataRight+: Energy Account Switch V1
@@ -47,7 +47,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 14 May 2025.
+   This Internet-Draft will expire on 20 May 2025.
 
 Copyright Notice
 
@@ -198,10 +198,11 @@ Table of Contents
 4.2.  Resource Server
 
    The Provider Resource Server: 1.  SHALL support the
-   initiateEnergySwitch and getEnergySwitchStatus endpoints as described
-   in [DATARIGHTPLUS-REDOCLY]; 2.  SHALL support
-   [DATARIGHTPLUS-DISCOVERY-V1] and advertise the initiateEnergySwitch
-   and getEnergySwitchStatus endpoints
+   initiateEnergySwitch, getEnergySwitchRequest and
+   getEnergySwitchStatus endpoints as described in
+   [DATARIGHTPLUS-REDOCLY]; 2.  SHALL support
+   [DATARIGHTPLUS-DISCOVERY-V1] and advertise the initiateEnergySwitch,
+   getEnergySwitchRequest and getEnergySwitchStatus endpoints
 
 5.  Initiator
 
@@ -213,8 +214,9 @@ Table of Contents
    [DATARIGHTPLUS-INFOSEC-BASELINE] the Initiator authorisation client:
 
    1.  SHALL support the Initiator provisions of
-       [DATARIGHTPLUS-DISCOVERY-V1] to discover the initiateEnergySwitch
-       and getEnergySwitchStatus endpoints;
+       [DATARIGHTPLUS-DISCOVERY-V1] to discover the
+       initiateEnergySwitch, getEnergySwitchRequest and
+       getEnergySwitchStatus endpoints;
    2.  SHALL perform a Dynamic Client Registration update, as described
        in [DATARIGHTPLUS-ADMISSION-CONTROL-00], to be granted access to
        the dio:action scope;
