@@ -120,8 +120,8 @@ The authorisation server:
 ## Resource Server
 
 The Provider Resource Server:
-1. **SHALL** support the `initiateEnergySwitch` and `getEnergySwitchStatus` endpoints as described in [@!DATARIGHTPLUS-REDOCLY];
-2. **SHALL** support [@!DATARIGHTPLUS-DISCOVERY-V1] and advertise the `initiateEnergySwitch` and `getEnergySwitchStatus` endpoints
+1. **SHALL** support the `initiateEnergySwitch`, `getEnergySwitchRequest` and `getEnergySwitchStatus` endpoints as described in [@!DATARIGHTPLUS-REDOCLY];
+2. **SHALL** support [@!DATARIGHTPLUS-DISCOVERY-V1] and advertise the `initiateEnergySwitch`, `getEnergySwitchRequest` and `getEnergySwitchStatus` endpoints
 
 # Initiator
 
@@ -131,7 +131,7 @@ The following provisions apply to participants operating Initiators.
 
 In addition to the provisions outlined in Section 4 of [@!DATARIGHTPLUS-INFOSEC-BASELINE] the Initiator authorisation client:
 
-1. **SHALL** support the Initiator provisions of [@!DATARIGHTPLUS-DISCOVERY-V1] to discover the `initiateEnergySwitch` and `getEnergySwitchStatus` endpoints;
+1. **SHALL** support the Initiator provisions of [@!DATARIGHTPLUS-DISCOVERY-V1] to discover the `initiateEnergySwitch`, `getEnergySwitchRequest` and `getEnergySwitchStatus` endpoints;
 2. **SHALL** perform a Dynamic Client Registration update, as described in [@!DATARIGHTPLUS-ADMISSION-CONTROL-00], to be granted access to the `dio:action` scope;
 
 # Implementation Considerations
