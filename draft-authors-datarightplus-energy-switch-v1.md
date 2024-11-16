@@ -20,6 +20,14 @@ organization="Biza.io"
 [author.address]
 email = "stuart@biza.io"
 
+[[author]]
+initials="W."
+surname="Cai"
+fullname="Wei Cai"
+organization="Biza.io"
+    [author.address]
+    email = "wcai@biza.io"
+
 %%%
 
 .# Abstract
