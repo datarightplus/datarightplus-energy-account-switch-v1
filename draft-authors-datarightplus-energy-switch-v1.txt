@@ -3,9 +3,9 @@
 
 
 datarightplus                                                     S. Low
-Internet-Draft                                                   Biza.io
-Intended status: Experimental                          14 September 2024
-Expires: 18 March 2025
+Internet-Draft                                                    W. Cai
+Intended status: Experimental                                    Biza.io
+Expires: 21 May 2025                                    17 November 2024
 
 
                   DataRight+: Energy Account Switch V1
@@ -47,7 +47,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 18 March 2025.
+   This Internet-Draft will expire on 21 May 2025.
 
 Copyright Notice
 
@@ -67,7 +67,7 @@ Table of Contents
    3.  High Level Process
    4.  Provider
      4.1.  Authorisation Server
-       4.1.1.  Request Object
+       4.1.1.  Example
        4.1.2.  Claims
      4.2.  Resource Server
    5.  Initiator
@@ -75,7 +75,7 @@ Table of Contents
    6.  Implementation Considerations
    7.  Security Considerations
    8.  Normative References
-   Author's Address
+   Authors' Addresses
 
 1.  Scope
 
@@ -145,20 +145,14 @@ Table of Contents
    1.  SHALL support the dio:action authorisation scope;
    2.  SHALL include the dio:action authorisation scope within Dynamic
        Client Registration responses;
-
-4.1.1.  Request Object
-
-   The request object submitted to the authorisation server:
-
-   1.  SHALL require a string parameter urn:dio:action_id, located
-       within the ID Token claims, referencing a valid _Action
-       Identifier_ previously submitted to the initiateEnergySwitch
-       endpoint and;
-   2.  SHALL be rejected if it contains a urn:dio:action_id parameter
+   3.  SHALL support request objects containing an essential ID Token
+       claim named urn:dio:action_id referencing a valid _Action
+       Identifier_;
+   4.  SHALL reject request objects containing a urn:dio:action_id claim
        that is unknown, expired or not associated with the requesting
        Initiator;
 
-4.1.1.1.  Example
+4.1.1.  Example
 
    The following is a non-normative example of a decoded request object
    requesting authorisation for a previously lodged actionId
@@ -175,7 +169,10 @@ Table of Contents
      "scope": "openid",
      "claims": {
        "id_token": {
-          "urn:dio:action_id": "496a3ba7-04b4-4362-b775-9e0433e48eea",
+         "urn:dio:action_id": {
+           "essential": true,
+           "values": ["496a3ba7-04b4-4362-b775-9e0433e48eea"]
+         },
          "acr": {
            "essential": true,
            "values": ["urn:cds.au:cdr:3"]
@@ -201,10 +198,11 @@ Table of Contents
 4.2.  Resource Server
 
    The Provider Resource Server: 1.  SHALL support the
-   initiateEnergySwitch and getEnergySwitchStatus endpoints as described
-   in [DATARIGHTPLUS-REDOCLY]; 2.  SHALL support
-   [DATARIGHTPLUS-DISCOVERY-V1] and advertise the initiateEnergySwitch
-   and getEnergySwitchStatus endpoints
+   initiateEnergySwitch, getEnergySwitchRequest and
+   getEnergySwitchStatus endpoints as described in
+   [DATARIGHTPLUS-REDOCLY]; 2.  SHALL support
+   [DATARIGHTPLUS-DISCOVERY-V1] and advertise the initiateEnergySwitch,
+   getEnergySwitchRequest and getEnergySwitchStatus endpoints
 
 5.  Initiator
 
@@ -216,8 +214,9 @@ Table of Contents
    [DATARIGHTPLUS-INFOSEC-BASELINE] the Initiator authorisation client:
 
    1.  SHALL support the Initiator provisions of
-       [DATARIGHTPLUS-DISCOVERY-V1] to discover the initiateEnergySwitch
-       and getEnergySwitchStatus endpoints;
+       [DATARIGHTPLUS-DISCOVERY-V1] to discover the
+       initiateEnergySwitch, getEnergySwitchRequest and
+       getEnergySwitchStatus endpoints;
    2.  SHALL perform a Dynamic Client Registration update, as described
        in [DATARIGHTPLUS-ADMISSION-CONTROL-00], to be granted access to
        the dio:action scope;
@@ -276,8 +275,13 @@ Table of Contents
               DOI 10.17487/RFC2119, March 1997,
               <https://www.rfc-editor.org/info/rfc2119>.
 
-Author's Address
+Authors' Addresses
 
    Stuart Low
    Biza.io
    Email: stuart@biza.io
+
+
+   Wei Cai
+   Biza.io
+   Email: wcai@biza.io
