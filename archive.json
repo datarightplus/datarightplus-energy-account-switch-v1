@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-11-14T00:10:27.526031+00:00",
+  "timestamp": "2024-11-17T00:12:01.666598+00:00",
   "repo": "datarightplus/datarightplus-energy-account-switch-v1",
   "labels": [
     {
@@ -83,5 +83,48 @@
       "comments": []
     }
   ],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 3,
+      "id": "PR_kwDOMxhpcM6CHNcw",
+      "title": "Uplift Energy Switch standard",
+      "url": "https://github.com/datarightplus/datarightplus-energy-account-switch-v1/pull/3",
+      "state": "OPEN",
+      "author": "perlboy",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [
+        "perlboy"
+      ],
+      "labels": [],
+      "body": "This PR includes the following:\r\n1. Cleanup example of non-normative example, closes #2 \r\n2. Update requirements for additional endpoint, once https://github.com/datarightplus/datarightplus-redocly/pull/21 is merged this closes #1 ",
+      "createdAt": "2024-11-16T02:48:19Z",
+      "updatedAt": "2024-11-16T23:12:41Z",
+      "baseRepository": "datarightplus/datarightplus-energy-account-switch-v1",
+      "baseRefName": "main",
+      "baseRefOid": "26300e847ba4a4b2e390576df4df25c1929b3227",
+      "headRepository": "datarightplus/datarightplus-energy-account-switch-v1",
+      "headRefName": "cleanup-energy-switch",
+      "headRefOid": "d46d9705ad5d713c629ebcbea56c84b444bdfb77",
+      "closedAt": null,
+      "mergedAt": null,
+      "mergedBy": null,
+      "mergeCommit": null,
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOMxhpcM6Re_6d",
+          "commit": {
+            "abbreviatedOid": "d46d970"
+          },
+          "author": "wcai-biza",
+          "authorAssociation": "NONE",
+          "state": "APPROVED",
+          "body": "",
+          "createdAt": "2024-11-16T23:12:41Z",
+          "updatedAt": "2024-11-16T23:12:41Z",
+          "comments": []
+        }
+      ]
+    }
+  ]
 }
