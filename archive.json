@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2024-11-17T00:12:01.666598+00:00",
+  "timestamp": "2024-11-19T00:11:09.994423+00:00",
   "repo": "datarightplus/datarightplus-energy-account-switch-v1",
   "labels": [
     {
@@ -55,15 +55,15 @@
       "id": "I_kwDOMxhpcM6c3HxV",
       "title": "Split Get Energy Switch Status endpoint / Add a Get Energy Switch Agreement endpoint?",
       "url": "https://github.com/datarightplus/datarightplus-energy-account-switch-v1/issues/1",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "wcai-biza",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "Currently, Get Energy Switch Status does not tell ADR how the account switch is going after authorize code is claimed. We need another endpoint that ADR can poll to know if the account switching completes successfully or fails.",
       "createdAt": "2024-11-04T02:44:28Z",
-      "updatedAt": "2024-11-04T02:44:28Z",
-      "closedAt": null,
+      "updatedAt": "2024-11-17T06:52:59Z",
+      "closedAt": "2024-11-17T06:52:59Z",
       "comments": []
     },
     {
@@ -71,15 +71,15 @@
       "id": "I_kwDOMxhpcM6dKLB0",
       "title": "urn:dio:action_id claim in the non-normative example of a decoded request object should be a JSON object",
       "url": "https://github.com/datarightplus/datarightplus-energy-account-switch-v1/issues/2",
-      "state": "OPEN",
+      "state": "CLOSED",
       "author": "wcai-biza",
       "authorAssociation": "NONE",
       "assignees": [],
       "labels": [],
       "body": "Currently, the non-normative example of a decoded request object in the spec has a string type `urn:dio:action_id` claim in `id_token` section:\r\n```\r\n{\r\n  ...\r\n  \"claims\": {\r\n    \"id_token\": {\r\n      \"urn:dio:action_id\": \"496a3ba7-04b4-4362-b775-9e0433e48eea\",\r\n      \"acr\": {\r\n        \"essential\": true,\r\n        \"values\": [\"urn:cds.au:cdr:3\"]\r\n      }\r\n    },\r\n    ...\r\n  },\r\n  ...\r\n}\r\n```\r\n\r\nHowever, according to https://openid.net/specs/openid-connect-core-1_0.html#IndividualClaimsRequests, `id_token` members must be either `null` or a JSON object.\r\n",
       "createdAt": "2024-11-05T23:14:48Z",
-      "updatedAt": "2024-11-05T23:14:48Z",
-      "closedAt": null,
+      "updatedAt": "2024-11-17T06:52:59Z",
+      "closedAt": "2024-11-17T06:52:58Z",
       "comments": []
     }
   ],
@@ -89,7 +89,7 @@
       "id": "PR_kwDOMxhpcM6CHNcw",
       "title": "Uplift Energy Switch standard",
       "url": "https://github.com/datarightplus/datarightplus-energy-account-switch-v1/pull/3",
-      "state": "OPEN",
+      "state": "MERGED",
       "author": "perlboy",
       "authorAssociation": "CONTRIBUTOR",
       "assignees": [
@@ -98,17 +98,19 @@
       "labels": [],
       "body": "This PR includes the following:\r\n1. Cleanup example of non-normative example, closes #2 \r\n2. Update requirements for additional endpoint, once https://github.com/datarightplus/datarightplus-redocly/pull/21 is merged this closes #1 ",
       "createdAt": "2024-11-16T02:48:19Z",
-      "updatedAt": "2024-11-16T23:12:41Z",
+      "updatedAt": "2024-11-17T06:52:58Z",
       "baseRepository": "datarightplus/datarightplus-energy-account-switch-v1",
       "baseRefName": "main",
       "baseRefOid": "26300e847ba4a4b2e390576df4df25c1929b3227",
       "headRepository": "datarightplus/datarightplus-energy-account-switch-v1",
       "headRefName": "cleanup-energy-switch",
       "headRefOid": "d46d9705ad5d713c629ebcbea56c84b444bdfb77",
-      "closedAt": null,
-      "mergedAt": null,
-      "mergedBy": null,
-      "mergeCommit": null,
+      "closedAt": "2024-11-17T06:52:57Z",
+      "mergedAt": "2024-11-17T06:52:57Z",
+      "mergedBy": "perlboy",
+      "mergeCommit": {
+        "oid": "9354ad9f5f777caad15a1d751b907a08505e5aff"
+      },
       "comments": [],
       "reviews": [
         {
