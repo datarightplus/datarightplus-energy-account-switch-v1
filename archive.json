@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2025-02-09T00:11:42.278430+00:00",
+  "timestamp": "2025-02-11T00:10:37.141058+00:00",
   "repo": "datarightplus/datarightplus-energy-account-switch-v1",
   "labels": [
     {
@@ -127,6 +127,34 @@
           "comments": []
         }
       ]
+    },
+    {
+      "number": 4,
+      "id": "PR_kwDOMxhpcM6KiTHQ",
+      "title": "Upgrade to latest github workflow",
+      "url": "https://github.com/datarightplus/datarightplus-energy-account-switch-v1/pull/4",
+      "state": "MERGED",
+      "author": "perlboy",
+      "authorAssociation": "CONTRIBUTOR",
+      "assignees": [],
+      "labels": [],
+      "body": "",
+      "createdAt": "2025-02-09T00:43:22Z",
+      "updatedAt": "2025-02-09T00:43:31Z",
+      "baseRepository": "datarightplus/datarightplus-energy-account-switch-v1",
+      "baseRefName": "main",
+      "baseRefOid": "9354ad9f5f777caad15a1d751b907a08505e5aff",
+      "headRepository": "datarightplus/datarightplus-energy-account-switch-v1",
+      "headRefName": "upgrade-github-workflow",
+      "headRefOid": "e8686aa5480426d82e7d4a75c893461c9d50ad45",
+      "closedAt": "2025-02-09T00:43:31Z",
+      "mergedAt": "2025-02-09T00:43:31Z",
+      "mergedBy": "perlboy",
+      "mergeCommit": {
+        "oid": "9748ae8877c24601ba64ada3fd0178522f526d62"
+      },
+      "comments": [],
+      "reviews": []
     }
   ]
 }
